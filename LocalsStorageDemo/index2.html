@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function increment(){
+
+            let count=localStorage.getItem("ctr");
+            count=Number(count)+1;
+
+            localStorage.setItem("ctr",String(count));
+
+            let span=document.querySelector("span");
+            span.innerHTML="<b>Count:</b>"+count;
+
+        }
+
+        function reset(){
+           
+
+            localStorage.clear();
+            let span=document.querySelector("span");
+            span.innerHTML="<b>Count:</b>0";
+
+        }
+
+        function setUp(){
+
+            let count=localStorage.getItem("ctr");
+            count=Number(count);
+            let span=document.querySelector("span");
+            span.innerHTML="<b>Count:</b>"+count;
+        }
+
+        window.onload=setUp;
+    </script>
+</head>
+<body>
+    <span></span><br>
+    <button onclick="increment()">Increment</button>
+    <button onclick="reset()">Reset</button>
+</body>
+</html>

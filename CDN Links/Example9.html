@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Creating a component function and rendering it using createElement() and render()</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+
+        function MyApp(props)
+        {
+
+            let myElement=React.createElement('h1',null,`Good Evening ${props.name}`);
+            return myElement;
+
+        }
+
+        let greeting=React.createElement(MyApp,{name:'Shyam'});
+        ReactDOM.render(greeting,document.querySelector('#root'));
+    </script>
+       
+
+    </script>
+</body>
+</html>

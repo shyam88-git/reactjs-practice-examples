@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class Emp{
+
+                static company="Google";
+            constructor(name,salary)
+            {
+
+
+                this.name=name;
+                this.salary=salary;
+            }
+
+            show(){
+
+                document.write("Name:"+this.name + ","+ "salary:"+this.salary+","+Emp.company);
+                document.write("<br>");
+            }
+
+           static changeCompany(cname){
+
+                //this.company=cname;
+                Emp.company=cname;
+            }
+
+        }
+
+        let e1=new Emp("Amit",20000.0);
+        let e2=new Emp("Samit",25000.0);
+        let e3=new Emp("Hari",30000.0);
+
+        e1.show();
+        e2.show();
+        e3.show();
+
+        Emp.changeCompany("Amazon");
+        document.write("<br>After company change<br>");
+        e1.show();
+        e2.show();
+        e3.show();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

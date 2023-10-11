@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+class Vehicle{
+
+constructor()
+{
+
+    document.write("instanting car......<br>");
+}
+
+accelerate()
+{
+
+    document.write("accelerating.................<br>");
+}
+}
+
+class Car extends Vehicle{
+constructor(){
+    super();//it is compulsory but not compulsory to be the first line
+    this.color="red";
+
+    document.write("Instanting car....................<br>");
+
+}
+
+reverse(){
+
+    document.write("reversing..................<br>");
+}
+}
+
+let myCar=new Car();
+myCar.accelerate();
+myCar.reverse();
+document.write( `The color of the car is ${myCar.color}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

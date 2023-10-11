@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function save(){
+
+            let txtName=document.getElementById('name');
+            let txtAge=document.getElementById('age');
+
+            let userName=txtName.value;
+
+            let Age=txtAge.value;
+
+            localStorage.setItem('name',userName);
+            localStorage.setItem('age',Age);
+
+            txtName.value="";
+            txtAge.value="";
+        }
+
+        function load(){
+
+            let txtName=document.querySelector('#name');
+            let txtAge=document.querySelector('#age');
+
+            let userName=localStorage.getItem('name');
+            let age=localStorage.getItem('age');
+            txtName.value=userName;
+            txtAge.value=age;
+        }
+    </script>
+</head>
+<body>
+    <h2>Your Details:</h2>
+    <b>Name:</b><br>
+    <input type="text" id="name"/></br></br>
+
+    <b>Age:</b><br>
+    <input type="number" id="age"/></br></br>
+
+    <button onclick="save()">Save</button>
+    <button onclick="load()">Load</button>
+
+</body>
+</html>

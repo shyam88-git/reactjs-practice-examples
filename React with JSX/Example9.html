@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Creating a component function and rendering it using createElement() and render()</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+
+    h1{color:orange};
+</style>
+</head>
+<body>
+    <div id="root"></div>   
+    <script type="text/babel">
+      function MyClock()
+      {
+
+         let today=new Date().toLocaleString();
+         return (
+            <div>
+                <h1> My Clock Component</h1>
+                    <p> The Current time and date are {today}</p>
+                </div>
+         );
+      }
+      function updateTime() {
+      ReactDOM.render(<MyClock/>, document.querySelector('#root'));
+      }
+      setInterval(updateTime,1000);
+    </script>
+</body>
+</html>

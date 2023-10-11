@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Creating a nested element hierarchy using createElement()</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>   
+    <script>
+        function MyApp(){
+      let app=React.createElement('div',null,React.createElement('h1',null,'My App'), 
+      React.createElement('p',null,'This is my react app'),React.createElement('ul',null,React.createElement('li',null,'list item 1'),
+      React.createElement('li',null,'list item 2'),
+      React.createElement('li','null','list item 3')));
+      return app;
+
+        }
+
+        ReactDOM.render(React.createElement(MyApp),document.querySelector("#root"));
+
+
+    </script>
+</body>
+</html>

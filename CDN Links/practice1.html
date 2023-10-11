@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+</head>
+<body>
+
+    <script>
+            
+            
+        class Person{
+
+
+            constructor(fname,lname){
+
+                this.fname=fname;
+                this.lname=lname;
+            }
+
+            get FullName(){
+
+                return `${this.fname +" "+ this.lname}`;
+            }
+
+            set FullName(name){
+
+                let arr=name.split(" ");
+                this.fname=arr[0];
+                this.lname=arr[1];
+            }
+        }
+
+        let p=new Person("Amit","Rana");
+        document.write("Full name :"+p.FullName);
+
+        p.FullName="Prasasti Tiwari";
+        document.write("Full name:"+p.FullName);
+        
+        
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class Car{
+
+            constructor(name,year)
+            {
+                this.name=name;
+                this.year=year;
+            }
+
+            getAge()
+            {
+
+                let date=new Date();
+                let currYear=date.getFullYear();
+                return currYear-this.year;
+
+            }
+            toString(){
+
+                return `${this.name},${this.year}`;
+            }
+        }
+
+        let ford=new Car("Mustang",2018);
+        let maruti=new Car("Ertiga",2020);
+
+        document.write(ford+"<br>");
+        document.write(`it's age is ${ford.getAge()}<br>`);
+
+
+        document.write(maruti +"<br>");
+        document.write(`it's age is ${maruti.getAge()}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

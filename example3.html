@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameters</title>
+    <script>
+
+        function show1(...args)
+        {
+
+            for(let x of args)
+            {
+                document.write(x+"<br>");
+            }
+        }
+
+        function show2(){
+
+            for(let y of arguments)
+            {
+
+                document.write(y+"<br>");
+            }
+        }
+
+        document.write("Using rest parameters <br>");
+        show1(10,20,30,40);
+
+        document.write("<br>Using arguments object <br>")
+        show2(50,60,80,70);x
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

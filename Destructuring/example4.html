@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Nested Array</title>
+    <script>
+
+        let person=["Gagan",21,25000.0,["Btech","MBA","PHD"]];
+        let [name,age=21,sal,[deg1,deg2,deg3]]=person;
+        document.write("name:"+name+"<br>");
+        document.write("age:"+age+"<br>");
+        document.write("sal:"+sal+"<br>");
+        document.write("degree1:"+deg1+"<br>");
+        document.write("degree2:"+deg2+"<br>");
+        document.write("degree3:"+deg3+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread example</title>
+    <script>
+
+        function Calculate(a,b,...args){
+
+            let sum=0;
+            args.forEach(x=>{
+
+
+                sum+=x;
+
+            })
+            return [a*b,sum];
+        }
+
+       let result=Calculate(10,20,40,...[30,40]);
+       document.write("Result is :"+result);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
